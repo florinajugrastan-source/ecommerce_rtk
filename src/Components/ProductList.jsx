@@ -14,7 +14,10 @@ const ProductList = () => {
     { id: 3, name: 'Product C', price: 30 },
   ];
 
-  const handleAddToCart = product => { dispatch(addItemToCart(product));// Add product to cart };
+  const handleAddToCart = product => {
+    dispatch(addItemToCart(product));// Add product to cart
+  };
+
 
   return (
     <div className="product-list">
@@ -31,10 +34,11 @@ const ProductList = () => {
             {cartItems.some(item => item.id === product.id) ? 'Added' : 'Add to Cart'}
         </button>
         </li>
-        ))}     
+        ))} 
+        
       </ul>
     </div>
-  );
+    );
 };
 
-export default ProductList;
+export default ProductList; 
